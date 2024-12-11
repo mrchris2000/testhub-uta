@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "name": "id",
+      "type": "integer",
+      "generator": {
+        "type": "NumberSequence",
+        "parameters": {
+          "start": 1,
+          "increment": 1
+        }
+      }
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "generator": {
+        "type": "RandomString",
+        "parameters": {
+          "length": 10
+        }
+      }
+    },
+    {
+      "name": "category",
+      "type": "object",
+      "generator": {
+        "type": "StaticObject",
+        "parameters": {
+          "values": [
+            { "id": 1, "name": "Dog" },
+            { "id": 2, "name": "Cat" },
+            { "id": 3, "name": "Fish" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "photoUrls",
+      "type": "array",
+      "generator": {
+        "type": "RandomURL",
+        "parameters": {
+          "count": 3
+        }
+      }
+    },
+    {
+      "name": "tags",
+      "type": "array",
+      "generator": {
+        "type": "StaticObject",
+        "parameters": {
+          "values": [
+            { "id": 1, "name": "Cute" },
+            { "id": 2, "name": "Adorable" },
+            { "id": 3, "name": "Playful" }
+          ],
+          "count": 2
+        }
+      }
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "generator": {
+        "type": "StaticString",
+        "parameters": {
+          "values": ["available", "pending", "sold"]
+        }
+      }
+    }
+  ]
+}
