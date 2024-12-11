@@ -1,9 +1,10 @@
 {
+  "name": "Petstore Data Configuration",
+  "description": "Synthetic data configuration for Petstore entities",
   "fields": [
     {
       "name": "id",
-      "type": "integer",
-      "generator": {
+      "generatorValues": {
         "type": "NumberSequence",
         "parameters": {
           "start": 1,
@@ -13,8 +14,7 @@
     },
     {
       "name": "name",
-      "type": "string",
-      "generator": {
+      "generatorValues": {
         "type": "RandomString",
         "parameters": {
           "length": 10
@@ -23,8 +23,7 @@
     },
     {
       "name": "category",
-      "type": "object",
-      "generator": {
+      "generatorValues": {
         "type": "StaticObject",
         "parameters": {
           "values": [
@@ -37,8 +36,7 @@
     },
     {
       "name": "photoUrls",
-      "type": "array",
-      "generator": {
+      "generatorValues": {
         "type": "RandomURL",
         "parameters": {
           "count": 3
@@ -47,8 +45,7 @@
     },
     {
       "name": "tags",
-      "type": "array",
-      "generator": {
+      "generatorValues": {
         "type": "StaticObject",
         "parameters": {
           "values": [
@@ -62,8 +59,7 @@
     },
     {
       "name": "status",
-      "type": "string",
-      "generator": {
+      "generatorValues": {
         "type": "StaticString",
         "parameters": {
           "values": ["available", "pending", "sold"]
@@ -72,3 +68,4 @@
     }
   ]
 }
+
