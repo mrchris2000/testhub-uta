@@ -5,8 +5,8 @@
     {
       "name": "id",
       "generatorValues": {
-        "type": "NumberSequence",
-        "parameters": {
+        "name": "NumberSequence",
+        "configurations": {
           "start": 1,
           "increment": 1
         }
@@ -15,8 +15,8 @@
     {
       "name": "name",
       "generatorValues": {
-        "type": "RandomString",
-        "parameters": {
+        "name": "RandomString",
+        "configurations": {
           "length": 10
         }
       }
@@ -24,8 +24,8 @@
     {
       "name": "category",
       "generatorValues": {
-        "type": "StaticObject",
-        "parameters": {
+        "name": "StaticObject",
+        "configurations": {
           "values": [
             { "id": 1, "name": "Dog" },
             { "id": 2, "name": "Cat" },
@@ -37,8 +37,8 @@
     {
       "name": "photoUrls",
       "generatorValues": {
-        "type": "RandomURL",
-        "parameters": {
+        "name": "RandomURL",
+        "configurations": {
           "count": 3
         }
       }
@@ -46,8 +46,8 @@
     {
       "name": "tags",
       "generatorValues": {
-        "type": "StaticObject",
-        "parameters": {
+        "name": "StaticObject",
+        "configurations": {
           "values": [
             { "id": 1, "name": "Cute" },
             { "id": 2, "name": "Adorable" },
@@ -60,12 +60,11 @@
     {
       "name": "status",
       "generatorValues": {
-        "type": "StaticString",
-        "parameters": {
+        "name": "StaticString",
+        "configurations": {
           "values": ["available", "pending", "sold"]
         }
       }
     }
   ]
 }
-
