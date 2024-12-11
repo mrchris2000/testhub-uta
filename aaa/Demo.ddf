@@ -1,5 +1,5 @@
 {
-  "data": [
+  "fields": [
     {
       "name": "id",
       "type": "integer",
