@@ -1,0 +1,95 @@
+note: Generated from recorded traffic
+steps:
+  - open:
+      note: Open Emerald
+      meta:
+        browserName: edge
+        browserVersion: 132.0.2957.41
+        platformName: windows
+      url: '${APP_EMERALD_URL}'
+  - with:
+      note: Welcome to Emerald
+      steps:
+        - click:
+            shot: shot/a6nwqb.dti.jpeg#313
+            object: html.p
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Sign In / Register
+  - with:
+      note: Emerald
+      steps:
+        - click:
+            shot: shot/3gkvrg.dti.jpeg#802
+            object: html.inputemail
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Email Address *
+        - type:
+            shot: shot/pspv4k.dti.jpeg#1107
+            object: html.inputemail
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Email Address *
+            value: bob1@moon.com
+        - click:
+            shot: shot/jgxzvu.dti.jpeg#1724
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Password *
+        - type:
+            shot: shot/wymvvo.dti.jpeg#2029
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Password *
+            value: password
+        - click:
+            shot: shot/zdlsya.dti.jpeg#2660
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Sign In
+  - press: refresh
+  - with:
+      note: Emerald
+      steps:
+        - open:
+            shot: shot/zdlsya.dti.jpeg#2660
+            url: http://mask.myddns.me:3001/Emerald/account
+            attach: 'false'
+        - click:
+            shot: shot/abe4q5.dti.jpeg#277
+            object: html.p
+            identifiers:
+              - properties:
+                  - xpath:
+                      - val: //div[@id='root']/div/div/div/header/div/div/div[2]/div/div[3]/button/div/div/p
+        - click:
+            shot: shot/abe4q5.dti.jpeg#277
+            object: html.h4
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Welcome,
+        - click:
+            shot: shot/5edynl.dti.jpeg#563
+            object: html.div
+            identifiers:
+              - properties:
+                  - content:
+                      - val: |-
+                          Wish List
+
+                          Wish List
+vars:
+  APP_EMERALD_URL:
+    expr: http://mask.myddns.me:3001/Emerald/
+    modifier: in

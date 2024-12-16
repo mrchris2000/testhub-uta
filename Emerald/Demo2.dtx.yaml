@@ -1,0 +1,139 @@
+note: Generated from recorded traffic
+steps:
+  - open:
+      note: Open Emerald
+      meta:
+        browserName: chrome
+        browserVersion: 131.0.6778.140
+        platformName: windows
+      url: '${APP_EMERALD_URL}'
+  - with:
+      note: Welcome to Emerald
+      steps:
+        - click:
+            shot: shot/ejgjdl.dti.jpeg#313
+            object: html.p
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Sign In / Register
+  - with:
+      note: Emerald
+      steps:
+        - click:
+            shot: shot/jto4ki.dti.jpeg#797
+            object: html.inputemail
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Email Address *
+        - type:
+            shot: shot/lkmquz.dti.jpeg#1102
+            object: html.inputemail
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Email Address *
+            value: bob@moon.com
+        - click:
+            shot: shot/bryp7z.dti.jpeg#1719
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Password *
+        - type:
+            shot: shot/iqer5q.dti.jpeg#2024
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Password *
+            value: password
+        - click:
+            shot: shot/si5z2q.dti.jpeg#2646
+            object: html.span
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Remember Me
+        - click:
+            shot: shot/vr3ypz.dti.jpeg#2947
+            object: html.inputcheckbox
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Remember Me
+        - click:
+            shot: shot/bwd6oy.dti.jpeg#3265
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Sign In
+  - with:
+      note: Emerald
+      steps:
+        - press: refresh
+        - click:
+            shot: shot/4os4nv.dti.jpeg#1207
+            object: html.p
+            identifiers:
+              - properties:
+                  - xpath:
+                      - val: //div[@id='root']/div/div/div/header/div/div/div[2]/div/div[3]/button/div/div/p
+        - click:
+            shot: shot/vfqzgn.dti.jpeg#474
+            object: html.span
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Account settings
+        - click:
+            shot: shot/4os4nv.dti.jpeg#1207
+            object: html.h6
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Account Address
+        - click:
+            shot: shot/spz6cr.dti.jpeg#1475
+            object: html.div
+            identifiers:
+              - properties:
+                  - content:
+                      - val: |-
+                          Wish List
+
+                          Wish List
+        - assign:
+            shot: shot/spz6cr.dti.jpeg#1475
+            object: html.div
+            identifiers:
+              - properties:
+                  - xpath:
+                      - val: //div[@id='mui-7']
+            properties:
+              - content:
+                  - var: Development
+        - verify:
+            shot: shot/spz6cr.dti.jpeg#1475
+            object: html.div
+            identifiers:
+              - object: html.div
+                properties:
+                  - xpath:
+                      - val: //div[@id='mui-7']
+            properties:
+              - content:
+                  - val: Sorry, this page is still in development.
+        - if:
+            shot: shot/spz6cr.dti.jpeg#1475
+            condition: Development == 'Sorry, this page is still in development.'
+            steps:
+              - fail: Wish list is not implemented yet!
+vars:
+  APP_EMERALD_URL:
+    expr: http://mask.myddns.me:3001/Emerald/
+    modifier: in
+  Development: ''

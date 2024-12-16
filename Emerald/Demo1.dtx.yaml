@@ -1,0 +1,93 @@
+note: Generated from recorded traffic
+steps:
+  - open:
+      note: Open Emerald
+      meta:
+        browserName: firefox
+        browserVersion: 133.0.3
+        platformName: windows
+      url: '${APP_EMERALD_URL}'
+  - with:
+      note: Welcome to Emerald
+      steps:
+        - click:
+            shot: shot/vgq26g.dti.jpeg#167
+            object: html.p
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Sign In / Register
+  - with:
+      note: Emerald
+      steps:
+        - click:
+            shot: shot/ynalnc.dti.jpeg#628
+            object: html.inputemail
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Email Address *
+        - type:
+            shot: shot/dh7mzi.dti.jpeg#933
+            object: html.inputemail
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Email Address *
+            value: bob@moon.com
+        - click:
+            shot: shot/425v6p.dti.jpeg#1550
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Password *
+        - type:
+            shot: shot/rtg4f3.dti.jpeg#1855
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Password *
+            value: password
+        - click:
+            shot: shot/rvg7ak.dti.jpeg#2790
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Sign In
+  - press: refresh
+  - click:
+      shot: shot/n2ixto.dti.jpeg#285
+      object: html.p
+      identifiers:
+        - properties:
+            - xpath:
+                - val: //div[@id='root']/div/div/div/header/div/div/div[2]/div/div[3]/button/div/div/p
+  - click:
+      shot: shot/dju7rt.dti.jpeg#575
+      object: html.div
+      identifiers:
+        - properties:
+            - xpath:
+                - val: //div[@id='my-account-page']/div/div/div/div[4]/div[4]
+      use: click
+  - verify:
+      shot: shot/dju7rt.dti.jpeg#575
+      object: html.div
+      identifiers:
+        - object: html.div
+          properties:
+            - xpath:
+                - val: //div[@id='mui-7']/div
+      properties:
+        - content:
+            - val: Sorry, this page is still in development.
+  - with:
+      enabled: 'false'
+      note: Emerald
+vars:
+  APP_EMERALD_URL:
+    expr: http://mask.myddns.me:3001/Emerald/
+    modifier: in

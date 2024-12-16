@@ -1,0 +1,142 @@
+note: Generated from recorded traffic
+steps:
+  - open:
+      note: Open Emerald
+      meta:
+        browserName: edge
+        browserVersion: 132.0.2957.41
+        platformName: windows
+      url: '${APP_EMERALD_URL}'
+  - with:
+      note: Welcome to Emerald
+      steps:
+        - click:
+            shot: shot/jfhq6n.dti.jpeg#313
+            object: html.p
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Sign In / Register
+  - with:
+      note: Emerald
+      steps:
+        - click:
+            shot: shot/j3uwgl.dti.jpeg#2682
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Register Now
+        - click:
+            shot: shot/247rhj.dti.jpeg#2962
+            object: html.inputemail
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Email Address *
+        - type:
+            shot: shot/izmfda.dti.jpeg#3301
+            object: html.inputemail
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Email Address *
+            value: bob1@moon.com
+        - click:
+            shot: shot/dxvwxj.dti.jpeg#3986
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: First Name *
+        - type:
+            shot: shot/rh4loa.dti.jpeg#4325
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: First Name *
+            value: bob
+        - click:
+            shot: shot/eo6jzc.dti.jpeg#5011
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Last Name *
+        - type:
+            shot: shot/sowhrf.dti.jpeg#5350
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Last Name *
+            value: moon
+        - click:
+            shot: shot/ls2onc.dti.jpeg#6037
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Password *
+        - type:
+            shot: shot/yaud4s.dti.jpeg#6376
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Password *
+            value: password
+        - click:
+            shot: shot/tg7de3.dti.jpeg#7062
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Verify Password *
+        - type:
+            shot: shot/5eo6bp.dti.jpeg#7401
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Verify Password *
+            value: password
+        - click:
+            shot: shot/2ivbjp.dti.jpeg#8109
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Complete Registration
+  - with:
+      note: Welcome to Emerald
+      steps:
+        - click:
+            shot: shot/vkpddy.dti.jpeg#8344
+            object: html.p
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Your Account
+        - click:
+            shot: shot/uksxcf.dti.jpeg#8809
+            object: html.span
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Account settings
+  - with:
+      note: Emerald
+      steps:
+        - click:
+            shot: shot/5e2rrs.dti.jpeg#9321
+            object: html.h5
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Personal Information
+vars:
+  APP_EMERALD_URL:
+    expr: http://mask.myddns.me:3001/Emerald/
+    modifier: in
