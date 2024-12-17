@@ -80,8 +80,8 @@ steps:
             object: html.p
             identifiers:
               - properties:
-                  - xpath:
-                      - val: //div[@id='root']/div/div/div/header/div/div/div[2]/div/div[3]/button/div/div/p
+                  - content:
+                      - val: Your Account
         - click:
             shot: shot/vfqzgn.dti.jpeg#474
             object: html.span
@@ -111,22 +111,11 @@ steps:
             object: html.div
             identifiers:
               - properties:
-                  - xpath:
-                      - val: //div[@id='mui-7']
+                  - class:
+                      - val: MuiTooltip-tooltip-eYihju cIneSY MuiTooltip-tooltip MuiTooltip-tooltipPlacementBottom
             properties:
               - content:
                   - var: Development
-        - verify:
-            shot: shot/spz6cr.dti.jpeg#1475
-            object: html.div
-            identifiers:
-              - object: html.div
-                properties:
-                  - xpath:
-                      - val: //div[@id='mui-7']
-            properties:
-              - content:
-                  - val: Sorry, this page is still in development.
         - if:
             shot: shot/spz6cr.dti.jpeg#1475
             condition: Development == 'Sorry, this page is still in development.'
