@@ -1,18 +1,18 @@
-name: Rational Test Automation Server
+name: DevOps Loop Test Automation
 
 on: workflow_dispatch
 
 jobs:
     OTS-Action:
         runs-on: self-hosted
-        name: Rational Test Automation Server
+        name: DevOps Loop Test Automation
         steps:
          - name: Execute Test
            uses: IBM/devopsauto-testserver-actions@main
            with:
-            serverUrl: <https://myserver>
-            offlineToken: <xxxxx>
-            teamspace: <MyTeam>
-            project: <MyProject>
-            branch: <main>
-            assetId: <yyyyyyy>
+            serverUrl: https://devops-automation.platform-staging1.us-east.containers.appdomain.cloud/test
+            offlineToken: eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJiZjUxN2E4Mi1hMDYyLTRhYWUtOWI5Yy0zODg3NjUwYTZjNzMifQ.eyJpYXQiOjE3NTQ1NjUyODEsImp0aSI6IjYxYzU4Zjg5LTJiMTctNDljOS1iYTI1LWRkN2RhOTE0MDM5NCIsImlzcyI6Imh0dHBzOi8vZGV2b3BzLWF1dG9tYXRpb24ucGxhdGZvcm0tc3RhZ2luZzEudXMtZWFzdC5jb250YWluZXJzLmFwcGRvbWFpbi5jbG91ZC9hdXRoL3JlYWxtcy9kZXZvcHMtYXV0b21hdGlvbiIsImF1ZCI6Imh0dHBzOi8vZGV2b3BzLWF1dG9tYXRpb24ucGxhdGZvcm0tc3RhZ2luZzEudXMtZWFzdC5jb250YWluZXJzLmFwcGRvbWFpbi5jbG91ZC9hdXRoL3JlYWxtcy9kZXZvcHMtYXV0b21hdGlvbiIsInN1YiI6IjI5YjVkN2E5LWY1ZGQtNDc0Ny1iMzZmLWU0Y2YxMmIxZWI5NSIsInR5cCI6Ik9mZmxpbmUiLCJhenAiOiJ0ZXN0c2VydmVyIiwic2lkIjoiOTFlYzcwZTYtNGZjMS00NTg3LWFiMDAtZTA2M2RjYzA5NTc2Iiwic2NvcGUiOiJzZXJ2aWNlX2FjY291bnQgcm9sZXMgcHJvZmlsZSBiYXNpYyBvZmZsaW5lX2FjY2VzcyBlbWFpbCB3ZWItb3JpZ2lucyBhY3IifQ.ji3Ph4usZtQ2qgVAiEI-t-Yqsn-gMPnJ4RyV0wAbNMvQkirsK6j5XD2_WF2ebxmHFdgSc1TLimOS1kwrWXpikA
+            teamspace: DemoSpace
+            project: DemoLoop
+            branch: main
+            assetId: 16b33e5fa56e73f64d27e55a3b0382c0e07ccb0a52e090348219de43717b4fc3
